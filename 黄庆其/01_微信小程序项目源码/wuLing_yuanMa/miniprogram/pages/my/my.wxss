@@ -1,0 +1,77 @@
+/* 通用样式 */
+image{
+  width:100rpx;
+  height:100rpx;
+}
+/* 弹性样式 */
+.display-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.display-between{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.display-align{
+  display:flex;
+  align-items: center;
+}
+.display-content{
+  display: flex;
+  justify-content: center;
+}
+.display-content2{
+  display: flex;
+  justify-content: space-between;
+}
+/* 弹性样式结束 */
+.header .bg{
+  height:300rpx;
+  width:100%;
+  background-image: url(https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/my/logoBg.png?sign=943fbaf4c1311da67e9e46915aa915ef&t=1606413162);
+  background-size:100vw;
+  background-position:0rpx -100rpx;
+  /* background-color:rgb(89, 89, 250); */
+}
+.nickname-left{
+  height:200rpx;
+ padding:5% 0 0 0;
+}
+.nickname-minibox image{
+  border-radius:30rpx;
+  height:120rpx;
+  width:120rpx;
+  margin:0 20rpx;
+}
+.nickname-right{
+  margin: 0 20rpx 0 0;
+  width:150rpx;
+}
+.userName{
+  margin:10% 0 0 0;
+  font-size:50rpx;
+}
+.nickname-minibox{
+  display:flex;
+  margin:30rpx 0 0 0;
+}
+.header-bottom{
+  width:94%;
+  margin:3%;
+  height:120rpx;
+  background-color:rgba(red, green, blue, 0.5);
+ 
+  border:2rpx solid #dcdcdc;
+  border-radius:30rpx;
+}
+.header-bottom image{
+margin:0 30rpx;
+}
+
+/* 余额图标 */
+.icon-box{
+  text-align:center;
+  margin:0% 10% 5% 10%;
+}

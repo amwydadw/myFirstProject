@@ -1,0 +1,54 @@
+<!--pages/TestDrive/TestDrive.wxml-->
+<view class="header">
+  <image src="https://www.wuling.com/images/reserve-kv.jpg" mode="widthFix"></image>
+</view>
+<view class="appointment">
+  预约试驾
+</view>
+<view class="addressBox">
+  <view class="userLick">
+    <view class="carSeries">车系</view>
+    <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+    <picker bindchange="bindPickerChange" data-carArray="{{item}}"  range="{{carArray}}">
+      <view class="picker">
+        <view class="pickerText"  bindblur="addCarName">{{carArray[index]}}</view>
+      </view>
+    </picker>
+  </view>
+  <view class="address">
+    <view class="addressTitle">称谓</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <text>{{item.value}}</text>
+      </radio>
+    </radio-group>
+  </view>
+  <view>
+    <view class="userTitle">姓名</view>
+    <view class="userName">
+      <view>
+        <input type="text" bindblur="myName" />
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="userTitle">手机号</view>
+    <view class="userName">
+      <view>
+        <input type="text" bindblur="myPhone" />
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section__title">地址</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="userAddress">
+        <text>当前地址:</text> {{region[0]}}-{{region[1]}}-{{region[2]}}
+      </view>
+    </picker>
+  </view>
+ 
+  <button class="btn" plain>立即预约</button>
+  
+</view>

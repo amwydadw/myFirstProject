@@ -1,0 +1,89 @@
+/* pages/detail/detail.wxss */
+.carBox{
+display: flex;
+justify-content: center;
+}
+.carDetail{
+  /* width: 100%; */
+  height: 300rpx;
+}
+.content-top{
+  display: flex;
+}
+.content-carTitle{
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.content-about{
+  color: #4070ff;
+  font-size: 16rpx;
+  margin: 0 10rpx;
+}
+.order-icon{
+  height:50rpx;
+  width:50rpx;
+}
+.information{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  text-align: center;
+}
+.content-right{
+  border:2rpx solid #dcdcdc;
+  border-radius: 10rpx;
+  height: 70rpx;
+}
+.order-box{
+  height: 40rpx;
+  width: 50rpx;
+  background:url(https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/class/details/icon.png?sign=bb0f72f528bf03bb405c70d2ed0cb874&t=1607947167)no-repeat;
+margin: auto;
+background-position:6px -200px;
+background-size: 250rpx;
+}
+
+.tabs{
+	display: flex;
+	height: 80rpx;
+	align-items: center;
+}
+.tabs>.item{
+	margin: 0 20rpx 0 40rpx;
+}
+.tabs .active{
+color: #4070ff;
+	font-weight:bold;
+	font-size: 30rpx;
+}
+
+.tabListBox{
+  display: flex;
+  margin:0 0 0 20rpx
+}
+.modelItem{
+  margin: 0 10rpx;
+  padding: 10rpx 16rpx;
+  border-radius:20rpx;
+  font-size: 20rpx;  
+  font-weight: bold;
+}
+.modelActive{
+  border:2rpx solid #dcdcdc;
+    color: #4070ff; 
+    border:2rpx solid #4070ff;
+}
+
+
+
+
+/* 上下边距公共样式 */
+/* detail页面字体颜色 */
+.detailColor{
+  color: #f60;
+}
+
+.calculation{
+  width: 260rpx;
+}

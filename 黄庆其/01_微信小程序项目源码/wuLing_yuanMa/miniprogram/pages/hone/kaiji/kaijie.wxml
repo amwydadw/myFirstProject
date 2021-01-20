@@ -1,0 +1,32 @@
+<view class="header">
+  <image class="image-item" mode="aspectFill"
+    src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/home/kaijie/img-home.jpg?sign=0403ac672f952237c4923a5e0c539e37&t=1606738293">
+  </image>
+  <image class="arr-down" mode="widthFix"
+    src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/home/kaijie/arr-down.png"></image>
+</view>
+<view>
+  <view class="banner">
+    <image class="image-item" mode="aspectFill"
+      src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/home/kaijie/img-video-3.jpg?sign=6f0ea634291e362bf72cd228f1691e99&t=1606739564">
+    </image>
+    <view class="banner-box">
+      <view>
+        <image class="video-left" mode="widthFix"
+          src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/home/kaijie/btn-video-left.png?sign=092cbe0cd5ed58b2b05133b7e8de49f0&t=1606740545">
+        </image>
+      </view>
+      <view>
+        <image class="btn-video" mode="widthFix"
+          src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/home/kaijie/btn-video.png?sign=14b2c858830ee701ed303a9779859b09&t=1606741269">
+        </image>
+      </view>
+      <view>
+        <image class="video-right" mode="widthFix"
+          src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/home/kaijie/btn-video-right.png?sign=84efe8882b834f2000cbf401a5654b1b&t=1606740574">
+        </image>
+      </view>
+    </view>
+
+  </view>
+</view>

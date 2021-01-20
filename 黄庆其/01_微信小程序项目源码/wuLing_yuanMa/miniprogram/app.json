@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/hone/hone",
+    "pages/classification/detail/detail",
+    "pages/hone/kaiji/kaijie",
+    "pages/my/login/login",
+    "pages/my/my",
+    "pages/TestDrive/TestDrive",
+    "pages/order/order",
+    "pages/classification/classification"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "五菱",
+    "navigationBarTextStyle": "black"
+   
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-picker": "@vant/weapp/picker/index"
+  },
+  "tabBar": {
+    "selectedColor": "#022342",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/hone/hone",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/logo1.jpg"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "images/class.png",
+        "selectedIconPath": "images/logo1.jpg"
+      },
+      {
+        "pagePath":  "pages/TestDrive/TestDrive",
+        "text": "试驾",
+        "iconPath": "images/dingdan.png",
+        "selectedIconPath": "images/logo1.jpg"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/logo1.jpg"
+      }
+    ]
+  }
+}

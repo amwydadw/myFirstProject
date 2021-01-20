@@ -1,0 +1,46 @@
+<!--pages/hone/hone.wxml-->
+<view class="header">
+  <view class="top">
+    <image class="logo" mode="aspectFill"
+      src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/home/logo.png"></image>
+      <!-- <view>热卖车型</view> -->
+    <view>
+      <van-cell custom-class="menu" title="更多" bind:click="showPopup" />
+      <van-popup show="{{ show }}" bind:close="onClose" position="right" custom-style="width: 20%; height:100%">内容
+      </van-popup>
+    </view>
+  </view>
+  <view>
+    <swiper autoplay circular easing-function="linear">
+      <swiper-item>
+        <view>
+          <image class="banner" bindtap="toKaijie" mode="aspectFill"
+            src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/home/kaijie.png"></image>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view>
+          <image class="banner" mode="aspectFill"
+            src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/my/miniev.png"></image>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view>
+          <image class="banner" mode="aspectFill"
+            src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/my/car3.png"></image>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+

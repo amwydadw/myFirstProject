@@ -1,0 +1,4 @@
+/* pages/cart/cart.wxss */
+.revice_address_row {
+  margin: 20rpx 0 0 0;
+}

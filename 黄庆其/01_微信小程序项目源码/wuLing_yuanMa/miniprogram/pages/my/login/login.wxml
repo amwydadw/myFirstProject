@@ -1,0 +1,46 @@
+<view class="header">
+  <view class="title">快捷登录</view>
+  <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" label="+86" bind:change="onChange" />
+  <view class="verification">
+    <view class="left"></view>
+    <view class="text">点击按钮进行验证</view>
+    <view class="right">
+      <image src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/login/verification.png"></image>
+    </view>
+  </view>
+  <van-field value="{{ sms }}" center clearable label="短信验证码" placeholder="请输入短信验证码" border="{{ false }}"
+    use-button-slot>
+    <van-button slot="button" size="small" type="primary">发送验证码</van-button>
+  </van-field>
+  <view class="lodin-button">
+    <van-button type="primary" round  block>登录</van-button>
+  </view>
+</view>
+<view>
+  <van-radio-group value="{{ radio }}" bind:change="onChange2">
+    <view class="agreement">
+      <van-radio name="1" shape="square"></van-radio>
+      <view class="text">《用户服务协议》《隐私政策》</view>
+      <view class="right-text">账户密码登录</view>
+    </view>
+  </van-radio-group>
+</view>
+<view class="footer">
+  <view class="icon">
+    <view>
+      <view>
+        <image src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/login/wechat.png"></image>
+      </view>
+      <view>微信</view>
+    </view>
+    <view>
+      <view><image src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/login/qq.png"></image></view>
+      <view>QQ</view>
+    </view>
+    <view>
+      <view><image src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/login/weibo.png"></image></view>
+      <view>微博</view>
+    </view>
+  </view>
+  <view class="text">如有问题，请联系客服:<text>18176490059</text></view>
+</view>

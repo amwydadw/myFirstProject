@@ -1,0 +1,19 @@
+.category{
+  display: flex;
+  margin: 0 20rpx;
+}
+.category .item{
+  background-color: #f8f9fc;
+  flex: 1;
+  text-align: center;
+ /* border-radius: 20rpx; */
+ margin: 0 5rpx;
+ height: 50rpx;
+ line-height: 50rpx;
+ font-size: 28rpx;
+}
+.active{
+color: #4070ff;
+border-bottom:4rpx solid #4070ff ;
+border-radius: 4rpx;
+}

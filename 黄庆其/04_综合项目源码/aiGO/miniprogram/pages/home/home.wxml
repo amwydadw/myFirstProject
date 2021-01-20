@@ -1,0 +1,190 @@
+<!--pages/home/home.wxml-->
+<view class="lmsc_index">
+  <!-- 搜索框开始 -->
+  <searchInput></searchInput>
+  <!-- 搜索框结束 -->
+  <view class="index_swiper">
+    <!--  -->
+    <swiper circular autoplay indicator-dots indicator-active-color="#1296db">
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator>
+          <image src="{{item.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- <view class="index_cate">
+    <navigator wx:for="{{catesList}}" wx:key="name">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view> -->
+  <view class="home_nav">
+    <view class="nav_top">
+      <navigator url="../nav_item/nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/qiandao.png" mode="heightFix"></image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/nanzhuang.png" mode="heightFix">
+        </image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/nvzhuang.png" mode="heightFix">
+        </image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/shiping.png" mode="heightFix"></image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/meizhuang.png" mode="heightFix">
+        </image>
+      </navigator>
+    </view>
+    <view class="nav_bottom">
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/zshiping.png" mode="heightFix">
+        </image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/bag.png" mode="heightFix"></image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/neiyi.png" mode="heightFix"></image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/zhongbiao.png" mode="heightFix">
+        </image>
+      </navigator>
+      <navigator url="../nav_item/nav_item" class="nav_item" class="nav_item">
+        <image src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/aiGo/nav/other.png" mode="heightFix"></image>
+      </navigator>
+    </view>
+  </view>
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="commodity_box">
+        <view class="commodity" wx:for="{{commodityList}}" wx:key="_id">
+          <navigator url="../nav_item/nav_item">
+          <view class="commodityImage">
+            <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          </view>
+        </navigator>
+          <view class="title">{{item.title}}</view>
+          <view class="price_box">
+            <view class="price">￥{{item.price}}</view>
+            <view class="pay">
+              <image
+                src="https://m.360buyimg.com/babel/jfs/t1/80110/10/10958/1524/5d843d4aE2ba7996a/db1d5c0612252af0.png"
+                mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </block>
+    <block wx:if="{{tabs[1].isActive}}">
+      <view class="commodity_box">
+        <view class="commodity" wx:for="{{nanZhuang}}" wx:key="_id">
+          <view class="commodityImage">
+            <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          </view>
+          <view class="title">{{item.title}}</view>
+          <view class="price_box">
+            <view class="price">￥{{item.price}}</view>
+            <view class="pay">
+              <image
+                src="https://m.360buyimg.com/babel/jfs/t1/80110/10/10958/1524/5d843d4aE2ba7996a/db1d5c0612252af0.png"
+                mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{tabs[2].isActive}}">
+      <view class="commodity_box">
+        <view class="commodity" wx:for="{{nvZhuang}}" wx:key="_id">
+          <view class="commodityImage">
+            <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          </view>
+          <view class="title">{{item.title}}</view>
+          <view class="price_box">
+            <view class="price">￥{{item.price}}</view>
+            <view class="pay">
+              <image
+                src="https://m.360buyimg.com/babel/jfs/t1/80110/10/10958/1524/5d843d4aE2ba7996a/db1d5c0612252af0.png"
+                mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{tabs[3].isActive}}">
+      <view class="commodity_box">
+        <view class="commodity" wx:for="{{motion}}" wx:key="_id">
+          <view class="commodityImage">
+            <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          </view>
+          <view class="title">{{item.title}}</view>
+          <view class="price_box">
+            <view class="price">￥{{item.price}}</view>
+            <view class="pay">
+              <image
+                src="https://m.360buyimg.com/babel/jfs/t1/80110/10/10958/1524/5d843d4aE2ba7996a/db1d5c0612252af0.png"
+                mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{tabs[4].isActive}}">
+      <view class="commodity_box">
+        <view class="commodity" wx:for="{{commodityList}}" wx:key="_id">
+          <view class="commodityImage">
+            <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          </view>
+          <view class="title">{{item.title}}</view>
+          <view class="price_box">
+            <view class="price">￥{{item.price}}</view>
+            <view class="pay">
+              <image
+                src="https://m.360buyimg.com/babel/jfs/t1/80110/10/10958/1524/5d843d4aE2ba7996a/db1d5c0612252af0.png"
+                mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{tabs[5].isActive}}">
+      <view class="commodity_box">
+        <view class="commodity" wx:for="{{commodityList}}" wx:key="_id">
+          <view class="commodityImage">
+            <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          </view>
+          <view class="title">{{item.title}}</view>
+          <view class="price_box">
+            <view class="price">￥{{item.price}}</view>
+            <view class="pay">
+              <image
+                src="https://m.360buyimg.com/babel/jfs/t1/80110/10/10958/1524/5d843d4aE2ba7996a/db1d5c0612252af0.png"
+                mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </Tabs>
+  <!-- 商品内容开始 -->
+  <!-- <view class="index_floor">
+    <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="name">
+      <view class="floor_title">
+        <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+      </view>
+      <view class="floor_list">
+        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name">
+          <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+     
+        </navigator>
+      </view>
+    </view>
+  </view> -->
+  <!-- 商品内容结束 -->
+</view>

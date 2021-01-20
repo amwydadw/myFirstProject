@@ -1,0 +1,125 @@
+<view class="defaultFontSize">
+  <view class="header">
+    <view class="carBox">
+      <image class="carDetail" mode="aspectFill"
+        src="{{car.imgUrl2}}">
+        <!-- https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/class/details/mini.png?sign=4947c833ac9273424410243fc7c2e346&t=1606896350 -->
+      </image>
+    </view>
+  </view>
+  <view class="content margin20">
+    <view class="content-top marginB20 justifyContentSB">
+      <view>
+        <view>
+          <text class="content-carTitle">{{car.title}}</text>
+          <text class="content-carType miniDefaultFontSize">{{car.carType}}</text>
+        </view>
+        <view><text class="content-carPrice miniDefaultFontSize">厂商指导价：</text> <text class="detailColor contentPrice">{{car.price}}</text>
+        </view>
+      </view>
+      <view class="content-right">
+        <view class="order-box">
+        </view>
+        <view class="content-about">参数配置</view>
+      </view>
+    </view>
+  </view>
+  <view class="information margin20 ">
+    <view>
+      <view>
+      </view>
+      <view>
+        <view>
+          {{car.infoOne}}
+        </view>
+        <view>
+         {{car.infoOneValue}}
+        </view>
+      </view>
+    </view>
+    <view>
+      <view>
+
+      </view>
+      <view>
+        <view>
+          {{car.infoTwo}}
+        </view>
+        <view>
+          {{car.infoTwoValue}}
+        </view>
+      </view>
+    </view>
+    <view>
+      <view>
+
+      </view>
+      <view>
+        <view>
+          {{car.infoThere}}
+        </view>
+        <view>
+          {{car.infoThereValue}}
+        </view>
+      </view>
+    </view>
+    <view>
+      <view>
+
+      </view>
+      <view>
+        <view>
+          {{car.infoFour}}
+        </view>
+        <view>
+          {{car.infoFourValue}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="tabs">
+    <view wx:for="{{orderTabs}}" wx:key="id" class="item {{item.isActive?'active':''}}" data-index="{{index}}"
+      bindtap="hanldeItemTap">{{item.name}}</view>
+  </view>
+  <block wx:if="{{orderTabs[0].isActive}}">
+    <!-- <detailYeah tabList="{{tabList}}" binditemChange="itemSwitchFu">
+  </detailYeah> -->
+    <view class="tabListBox">
+      <view wx:for="{{tabList}}" wx:key="id" class="modelItem {{item.isActive?'modelActive':''}}" data-index="{{index}}"
+        bindtap="tabSwitch">{{item.name}}
+      </view>
+    </view>
+    <block wx:if="{{tabList[0].isActive}}">
+      <view class="margin20">
+        <view class="marginTB20">2020款</view>
+        <view>电动27马力</view>
+        <view class="display justifyContentSB marginTB20">
+          <view>2020款轻松款</view>
+          <view class="detailColor">2.88万起</view>
+        </view>
+        <view class="display justifyContentSB">
+          <view class="miniDefaultFontSize">24%的人关注</view>
+          <view class="miniDefaultFontSize">厂商指导价:2.88万</view>
+
+        </view>
+        <view class="display justifyContentSB marginTB20">
+          <view class="display justifyContentSB calculation">
+            <view>计算</view>
+          <view>PK</view>
+          </view>
+          <view class="defaultGetBtn">获取底价</view>
+        </view>
+      </view>
+      
+    </block>
+    <block wx:if="{{tabList[1].isActive}}">国VI</block>
+    <block wx:if="{{tabList[2].isActive}}">2020款</block>
+    <block wx:if="{{tabList[3].isActive}}">无</block>
+    <block wx:if="{{tabList[4].isActive}}">无</block>
+  </block>
+  <block wx:if="{{orderTabs[1].isActive}}">讨论</block>
+  <block wx:if="{{orderTabs[2].isActive}}">经销商</block>
+  <block wx:if="{{orderTabs[3].isActive}}">降价</block>
+  <block wx:if="{{orderTabs[4].isActive}}">分期</block>
+</view>

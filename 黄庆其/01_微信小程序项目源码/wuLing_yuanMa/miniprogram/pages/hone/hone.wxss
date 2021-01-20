@@ -1,0 +1,36 @@
+/* pages/hone/hone.wxss */
+
+.header .logo {
+  width: 350rpx;
+  height: 50rpx;
+  /* position: relative; */
+  margin: 0 0 0 3%;
+  
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.header .van-cell__title, .van-cell__value{
+   color:#022342;
+   font-size:30rpx;
+   font-weight:bold;
+   
+}
+/* .menu{
+ 
+} */
+
+.banner {
+  box-sizing: border-box;
+  /* border:2rpx solid red; */
+  z-index: -1;
+}
+
+.banner,
+swiper,
+swiper-item {
+  height: 92vh;
+  width: 100vw;
+}

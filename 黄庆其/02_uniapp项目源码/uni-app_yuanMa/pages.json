@@ -1,0 +1,35 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "新闻首页"
+			}
+		}
+	    ,{
+            "path" : "pages/info/info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "内容详情",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#79b5f8",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition":{//模式配置，仅开发期间生效。
+		"current":0,//当前激活的模式(list的索引项),相当于数组的下标
+		"list":[{
+			"name":"info",//自定义名字，需要打开页面的名称
+			"path":"pages/info/info",//启动页面，必选，和微信小程序的相似
+			"query":"newsid=5310903"//启动参数，在页面的onload函数里面得到，唯一属性。
+		}]
+	}
+}

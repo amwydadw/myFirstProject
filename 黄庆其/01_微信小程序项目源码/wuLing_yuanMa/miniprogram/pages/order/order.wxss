@@ -1,0 +1,13 @@
+.header{
+	height: 100rpx;
+	align-items: center;
+}
+.header>.item{
+	margin: 0 0 0 20rpx;
+	flex: 1;
+}
+.active{
+color: #4070ff;
+	font-weight:bold;
+	font-size: 30rpx;
+}

@@ -1,0 +1,38 @@
+/* 左右边距公共样式*/
+.margin20{
+  margin: 0 20rpx;
+}
+.marginT20{
+  margin-top:20rpx ;
+}
+.marginB20{
+  margin-bottom: 20rpx;
+}
+.marginTB20{
+  margin: 20rpx 0;
+}
+/* 获取按钮 */
+.defaultGetBtn{
+  border:2rpx solid #0055fe;
+  padding: 8rpx;
+  border-radius: 8rpx;
+  color: #0055fe;
+  font-size: 26rpx;
+}
+/* 默认字体 */
+.defaultFontSize{
+  font-size: 24rpx;
+}
+.miniDefaultFontSize{
+  font-size: 22rpx;
+  font-weight: 300;
+  color: #666d7f;
+}
+/* 弹性样式 */
+.display{
+  display:flex;
+}
+/* 水平分散对齐 */
+.justifyContentSB{
+  justify-content:space-between;
+  }

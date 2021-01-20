@@ -1,0 +1,57 @@
+.header{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 20rpx;
+  font-size: 34rpx;
+}
+.header image{
+  margin: 10rpx 40rpx 0 20rpx;
+  width: 110rpx;
+}
+.introdution{
+  position: absolute;
+  right: 20rpx;
+  color: blue;
+  font-size: 24rpx;
+}
+
+.brand-title{
+  margin: 30rpx 0 0 0;
+  height: 50rpx;
+  background-image: linear-gradient(90deg,#f1f3f6,#fff);
+}
+.brand-title .title{
+  line-height: 50rpx;
+  margin: 0 40rpx;
+  color: #666d7f;
+}
+.car-item{
+  display: flex;
+  height: 100%;
+}
+.car-name-title{
+  display: flex;
+  margin: 10% 0 0 0;
+}
+.car-active{
+  margin: 30rpx 40rpx;
+}
+.car-img{
+  width: 184rpx;
+  margin: 0 20rpx 0 0 ;
+}
+.car-price{
+  margin-top: 9px;
+  color: #f60;
+  white-space: nowrap;
+  font-size: 24rpx;
+}
+
+.car-discount{
+  color: #f60;
+  background-color: rgba(255,102,0,.1);
+padding: 10rpx;
+font-size: 20rpx;
+margin: 0 0 0 20rpx;
+}

@@ -1,0 +1,36 @@
+.image-item {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.arr-down {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+  animation: arrHome 1.5s linear infinite;
+  width: 100rpx;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-box {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.btn-video{
+width:350rpx;
+margin: auto;
+}
+.video-left,
+.video-right {
+  width: 100rpx;
+  margin: 0 20rpx;
+}

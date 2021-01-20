@@ -1,0 +1,55 @@
+/* pages/TestDrive/TestDrive.wxss */
+.header image{
+  width: 100%;
+}
+.appointment{
+  text-align: center;
+}
+.addressBox{
+  margin: 0 10% 60rpx 10%;
+  padding-bottom: 60rpx;
+}
+.carSeries,.addressTitle,.userTitle,.section__title,.userAddress{
+  margin: 10px;
+}
+.userAddress{
+  font-size: 14px;
+  display: flex;
+  align-items: center; /*定义body的元素垂直居中*/
+
+}
+.userAddress>text{
+  font-size: 16px;
+  margin-right:5px;
+}
+.picker{
+height: 25px;
+width: 100%;
+border-radius: 25px;
+/* background-color: rgb(233, 231, 229); */
+border: #dcdcdc 1rpx solid;
+padding: 5px 0 5px 0;
+}
+.pickerText{
+  padding: 0 0 0 10px;
+}
+.userName{
+  height: 25px;
+width: 100%;
+border-radius: 25px;
+/* background-color: antiquewhite; */
+/* padding: ; */
+border: #dcdcdc 1rpx solid;
+padding: 5px 0;
+}
+.userName>view{
+  padding: 0 0 0 10px;
+}
+.address radio-group>radio{
+margin-right:10px ;
+}
+.addressBox .btn{
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  border: #dcdcdc 1rpx solid;
+}

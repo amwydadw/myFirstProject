@@ -1,0 +1,50 @@
+<view class="header">
+  <view class="bg">
+    <view class="nickname-left display-content2">
+      <view class="nickname-minibox" >
+        <view>
+          <image mode="aspectFill" src="{{avatar}}"></image>
+        </view>
+          <view class="userName">{{userName}}</view>
+      </view>
+      <view class="nickname-right display-content2">
+        <view><button size="mini" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">{{login}}</button> </view>
+        
+      </view>
+    </view>
+    
+  </view>
+  <view class="header-bottom display-align">
+      <view>
+        <image mode="aspectFill" src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/my/logoBg.png?sign=943fbaf4c1311da67e9e46915aa915ef&t=1606413162"></image>
+      </view>
+      <view>mycar</view>
+    </view>
+</view>
+<view class="icon-box display-between">
+  <view>
+    <view>
+      <image mode="aspectFill" src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/my/logoBg.png?sign=943fbaf4c1311da67e9e46915aa915ef&t=1606413162"></image>
+    </view>
+    <view>余额</view>
+  </view>
+  <view>
+    <view>
+      <image mode="aspectFill" src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/my/logoBg.png?sign=943fbaf4c1311da67e9e46915aa915ef&t=1606413162"></image>
+    </view>
+    <view>贷款</view>
+  </view>
+  <view>
+    <view>
+      <image mode="aspectFill" src="https://616d-amwydadw-z71vo-1302490479.tcb.qcloud.la/wuLingCar/my/logoBg.png?sign=943fbaf4c1311da67e9e46915aa915ef&t=1606413162"></image>
+    </view>
+    <view>还款</view>
+  </view>
+</view>
+<view>
+  <van-cell is-link title="优惠" link-type="navigateTo" />
+  <van-cell is-link title="足迹" link-type="navigateTo" />
+  <van-cell is-link title="违章查询" link-type="navigateTo" />
+  <van-cell is-link title="设置" link-type="navigateTo" />
+
+</view>

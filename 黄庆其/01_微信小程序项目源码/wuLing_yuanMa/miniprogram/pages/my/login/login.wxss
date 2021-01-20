@@ -1,0 +1,83 @@
+/* pages/login/login.wxss */
+
+.title {
+  margin: 40rpx 20rpx;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.verification {
+  display: flex;
+  align-items: center;
+  border: 2rpx solid #dcdcdc;
+  padding: 20rpx;
+  position: relative;
+  margin: 20rpx;
+}
+
+.verification .left {
+  background-color: #dcdcdc;
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 30rpx;
+  margin: 0 20rpx 0 0;
+}
+
+.verification .text {
+  color: #7e7e7e;
+  font-size: 14px;
+}
+
+.verification .right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20rpx;
+}
+
+.verification image {
+  width: 50rpx;
+  height: 50rpx;
+
+}
+
+.lodin-button {
+  margin: 40rpx 20rpx;
+}
+
+.agreement {
+  display: flex;
+  font-size: 12px;
+  color: #dcdcdc;
+margin: 0 20rpx;
+position: relative;
+}
+
+.agreement .text {
+  border-bottom: 2rpx solid #dcdcdc;
+}
+
+.agreement .right-text {
+  color: blue;
+position: absolute;
+right: 0;
+}
+.footer{
+margin:0 20% ;
+text-align: center;
+}
+.footer image{
+width: 100rpx;
+height: 100rpx;
+}
+.footer .icon{
+  display: flex;
+  margin: 40% 0 20rpx 0;
+  justify-content: space-between;
+}
+.footer .text{
+  font-size: 12px;
+}
+.footer text{
+  color: blue;
+}

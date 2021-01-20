@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/cart/cart",
+    "pages/nav_item/nav_item",
+    "pages/category/category",
+    "pages/feedback/feedback",
+    "pages/goods_list/goods_list",
+    "pages/goods_detail/goods_detail",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/pay/pay",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/auth/auth",
+    "pages/collect/collect"
+
+
+   
+  ],
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1296db",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "./icons/home.png",
+      "selectedIconPath": "./icons/home_o.png"
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "分类",
+      "iconPath": "./icons/category.png",
+      "selectedIconPath": "./icons/category_o.png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "./icons/cart.png",
+      "selectedIconPath": "./icons/cart_o.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "./icons/user.png",
+      "selectedIconPath": "./icons/user_o.png"
+    }
+  ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "爱GO",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

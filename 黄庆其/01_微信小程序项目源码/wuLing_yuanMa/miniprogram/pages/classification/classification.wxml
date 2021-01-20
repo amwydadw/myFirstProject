@@ -1,0 +1,120 @@
+<!-- 头部 -->
+<view class="header">
+  <!-- logo -->
+  <view>
+    <image mode="widthFix" src="cloud://amwydadw-z71vo.616d-amwydadw-z71vo-1302490479/wuLingCar/class/logo.png"></image>
+  </view>
+  <view>五菱汽车</view>
+  <view class="introdution">品牌介绍 ></view>
+</view>
+<!-- 内容切换 -->
+<tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+  <!-- 简介 -->
+  <view class="brand-title">
+    <view class="title">上汽通用五菱</view>
+  </view>
+  <!-- 内容切换数组下标为0 -->
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="car">
+      <!-- 循环每辆车的信息 -->
+      <view wx:for="{{car}}" bindtap="toDetails" data-index="{{index}}" wx:key="id" class="car-item car-active">
+        <view>
+          <image class="car-img " mode="widthFix" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="car-name">
+          <view class="car-name-title">
+            <view class="car-top">{{item.title}}</view>
+            <text class="car-discount">直降</text>
+          </view>
+          <view class="car-price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 内容切换数组下标为1 -->
+  <block wx:elif="{{tabs[1].isActive}}">
+    <view class="car">
+      <view wx:for="{{car}}" wx:if="{{index==0}}" wx:key="id" class="car-item car-active">
+        <view>
+          <image class="car-img " mode="widthFix" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="car-name">
+          <view class="car-name-title">
+            <view class="car-top">{{item.title}}</view>
+            <text class="car-discount">直降</text>
+          </view>
+          <view class="car-price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 内容切换数组下标为2 -->
+  <block wx:elif="{{tabs[2].isActive}}">
+    <view class="car">
+      <view wx:for="{{car}}" wx:if="{{index==5-1}}" wx:key="id" class="car-item car-active">
+        <view>
+          <image class="car-img " mode="widthFix" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="car-name">
+          <view class="car-name-title">
+            <view class="car-top">{{item.title}}</view>
+            <text class="car-discount">直降</text>
+          </view>
+          <view class="car-price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 内容切换数组下标为3 -->
+  <block wx:elif="{{tabs[3].isActive}}">
+    <view class="car">
+      <view wx:for="{{car}}" wx:if="{{index==2-1||index==4-1||index==14-1}}" wx:key="id" class="car-item car-active">
+        <view>
+          <image class="car-img " mode="widthFix" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="car-name">
+          <view class="car-name-title">
+            <view class="car-top">{{item.title}}</view>
+            <text class="car-discount">直降</text>
+          </view>
+          <view class="car-price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 内容切换数组下标为4 -->
+  <block wx:elif="{{tabs[4].isActive}}">
+    <view class="car">
+      <view wx:for="{{car}}" wx:if="{{index==3-1||index==7-1||index==9-1||index==10-1||index==11-1||index==12-1}}"
+        wx:key="id" class="car-item car-active">
+        <view>
+          <image class="car-img " mode="widthFix" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="car-name">
+          <view class="car-name-title">
+            <view class="car-top">{{item.title}}</view>
+            <text class="car-discount">直降</text>
+          </view>
+          <view class="car-price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 内容切换数组下标为5 -->
+  <block wx:elif="{{tabs[5].isActive}}">
+    <view class="car">
+      <view wx:for="{{car}}" wx:if="{{index==6-1||index==8-1||index==13-1}}" wx:key="id" class="car-item car-active">
+        <view>
+          <image class="car-img " mode="widthFix" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="car-name">
+          <view class="car-name-title">
+            <view class="car-top">{{item.title}}</view>
+            <text class="car-discount">直降</text>
+          </view>
+          <view class="car-price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</tabs>

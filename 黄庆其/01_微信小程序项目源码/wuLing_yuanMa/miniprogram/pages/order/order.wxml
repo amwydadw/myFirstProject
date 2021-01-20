@@ -1,0 +1,10 @@
+<view class="header display">
+  <view wx:for="{{orderTabs}}" wx:key="id" class="item {{item.isActive?'active':''}}" data-index="{{index}}"  bindtap="hanldeItemTap" >{{item.name}}</view>
+</view>
+<view class="margin20">
+<block wx:if="{{orderTabs[0].isActive}}"><view space="emsp">全 部</view> </block>
+<block wx:if="{{orderTabs[1].isActive}}">待付款</block>
+<block wx:if="{{orderTabs[2].isActive}}">进行中</block>
+<block wx:if="{{orderTabs[3].isActive}}">已完成</block>
+<block wx:if="{{orderTabs[4].isActive}}">已取消</block>
+</view>
