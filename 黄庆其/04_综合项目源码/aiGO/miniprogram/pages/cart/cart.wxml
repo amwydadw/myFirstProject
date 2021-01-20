@@ -1,5 +1,5 @@
 <!-- 购物车i3 -->
-<!-- 收货地址 -->
+<!-- 收货地址 amd2 -->
 <view class="revice_address_row">
     <view class="address_btn" wx:if="{{!address.userName}}">
         <button bindtap="handleChooseAddress" type="primary" plain="{{true}}">获取收货地址</button>
