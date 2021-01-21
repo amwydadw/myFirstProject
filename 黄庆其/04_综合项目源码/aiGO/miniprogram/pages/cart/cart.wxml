@@ -5,6 +5,6 @@
         <button bindtap="handleChooseAddress" type="primary" plain="{{true}}">获取收货地址</button>
     </view>
     <view wx:else>
-  
+  {{address.userName}}
     </view>
 </view>
