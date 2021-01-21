@@ -1,9 +1,73 @@
 /* pages/cart/cart.wxss */
-.revice_address_row{
+.revice_address_row {
     margin: 20rpx 0 0 0;
-    .address_btn{
-        button{
 
-        }
+    .address_btn {
+        button {}
     }
 }
+
+.user_info_row {
+    display: flex;
+    padding: 20rpx;
+    .user_info {
+       flex: 5; 
+    }
+
+    .user_phone {
+        flex: 3;
+        text-align: right;
+    }
+}
+// 购物车
+ .cart_content {
+     .cart_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: var(--priceColor);
+  border-top: 1rpx solid  currentColor;
+  border-bottom: 1rpx solid  currentColor;
+    }
+  
+     .cart_main {
+       .cart_item {
+      
+  
+         .cart_chk_warp {
+          checkbox-group {
+            checkbox {
+  
+            }
+          }
+        }
+  
+        navigator.cart_img_wrap {
+          image {
+  
+          }
+        }
+  
+         .cart_info_wrap {
+           .goods_name {
+  
+          }
+  
+           .goods_price_warp {
+             .goods_price {
+  
+            }
+  
+             .cart_num_tool {
+               .num_edit {
+  
+              }
+  
+               .goods_num {
+  
+              }
+            }
+          }
+        }
+      }
+    }
+  }

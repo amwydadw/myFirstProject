@@ -2,3 +2,21 @@
 .revice_address_row {
   margin: 20rpx 0 0 0;
 }
+.user_info_row {
+  display: flex;
+  padding: 20rpx;
+}
+.user_info_row .user_info {
+  flex: 5;
+}
+.user_info_row .user_phone {
+  flex: 3;
+  text-align: right;
+}
+.cart_content .cart_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: var(--priceColor);
+  border-top: 1rpx solid  currentColor;
+  border-bottom: 1rpx solid  currentColor;
+}

@@ -17,6 +17,7 @@ page{
   14px=2rpx
   */
   --priceColor: #ff5000;
+  --currentColor:#707070;
   font-size: 28rpx;
 }
 image{

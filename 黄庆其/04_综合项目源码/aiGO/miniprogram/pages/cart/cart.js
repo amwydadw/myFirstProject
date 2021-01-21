@@ -40,7 +40,8 @@ this.setData({
 // 封装
  const res1=await getSetting();
  const scopeAddress=res1.authSetting['scope.address'];
-const address=await chooseAddress();
+let address=await chooseAddress();
+address.all=address.provinceName+address.cityName+address.countyName+address.detailInfo;
 wx.setStorageSync('address', address)
   }
 })
