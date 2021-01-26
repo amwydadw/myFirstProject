@@ -9,39 +9,76 @@
 2假设用户点击获取收货地址的提示框，取消
 scope值false
 */
-import{getSetting,chooseAddress}from '../../utils/asyncWX';
+import {
+  getSetting,
+  chooseAddress
+} from '../../utils/asyncWX';
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
- data:{
-   address:[]
- },
-onShow(){
-const address=wx.getStorageSync('address');
-this.setData({
-  address
-})
-},
-  async handleChooseAddress(){
+  data: {
+    address: {},
+    cart: [],
+    allchecked:false,
+    totalPrice:0,
+    totalNum:0,
+  },
+  onShow() {
+    // 获取缓存中的收货地址信息
+    const address = wx.getStorageSync('address');
+    // 获取缓存中的购物车数据
+    const cart = wx.getStorageSync('cart')||[];
+    // 计算全选
+    // const allchecked=cart.length?cart.every(v=>v.checked):false;
+    let allchecked=true;
+    // 总价格 总数量
+    let totalPrice=0;
+    let totalNum=0;
+    cart.forEach(v=>{
+      if(v.checked){
+        totalPrice+=v.num*v.goods_price;
+        totalNum+=v.num;
+      }else{
+        allchecked=false;
+      }
+    })
+    // 判断数组是否为空
+    allchecked=cart.length!=0?allchecked:false;
+    // 给data赋值
+    this.setData({
+      address,
+      cart,
+      allchecked,
+      totalNum,
+      totalPrice
+    })
+  },
+  async handleChooseAddress() {
     // 原生
-  //  wx.getSetting({
-  //   success:(res)=>{
-  //     const scopeAddress=res.authSetting['scope.address'];
-  //     if(scopeAddress===true||scopeAddress===undefined||scopeAddress===""){
-  //       wx.chooseAddress({
-  //         success: (result) => {
-  //           console.log(result)
-  //         },
-  //       });
-  //     }else{
-        
-  //     }
-  //   }
-  //  })
-// 封装
- const res1=await getSetting();
- const scopeAddress=res1.authSetting['scope.address'];
-let address=await chooseAddress();
-address.all=address.provinceName+address.cityName+address.countyName+address.detailInfo;
-wx.setStorageSync('address', address)
+    //  wx.getSetting({
+    //   success:(res)=>{
+    //     const scopeAddress=res.authSetting['scope.address'];
+    //     if(scopeAddress===true||scopeAddress===undefined||scopeAddress===""){
+    //       wx.chooseAddress({
+    //         success: (result) => {
+    //           console.log(result)
+    //         },
+    //       });
+    //     }else{
+
+    //     }
+    //   }
+    //  })
+    // 封装
+    const res1 = await getSetting();
+    const scopeAddress = res1.authSetting['scope.address'];
+    let address = await chooseAddress();
+    address.all = address.provinceName + address.cityName + address.countyName + address.detailInfo;
+    wx.setStorageSync('address', address)
+  },
+  // 商品选中
+  handelItemChande(e){
+    const goods_id=e.currentTarget.dataset.id;
+    console.log(goods_id);
+    
   }
 })

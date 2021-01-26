@@ -79,6 +79,7 @@ Page({
     if (index === -1) {
       // 3不存在，第一次添加
       this.GoodsInfo.num=1;
+      this.GoodsInfo.checked=true;
       cart.push(this.GoodsInfo)
     } else {
       // 4已经存在购物车数据执行num++
