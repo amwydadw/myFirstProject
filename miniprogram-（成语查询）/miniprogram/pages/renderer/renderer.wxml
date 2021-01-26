@@ -1,0 +1,25 @@
+<!--miniprogram/pages/renderer/renderer.wxml-->
+<!-- wx:for:代表循环读取指定数组里的每一项内容item表示数组中的每一项内容 -->
+<view wx:for="{{city}}">
+<text>城市:{{item.name}}</text>
+<text>省份:{{item.province}}</text>
+</view>
+<block wx:for="{{city}}">
+<text>城市:{{item.name}}</text>
+</block>
+
+<view wx:if="{{length > 5}}"> 1 </view>
+<view wx:elif="{{length > 2}}"> 2 </view>
+<view wx:else> 3 </view>
+
+
+<template name="country">
+ 国家:{{name}}    <!--数据名字（变量名字） -->
+</template>
+<template name="welcome">
+最受欢迎的国家:{{welname}}
+</template>
+<template is="country" data="{{...conts}}"></template>
+<template is="welcome" data="{{...conts}}"></template>
+<!-- is指定模版名字（使用那个模版）data模版来源 -->
+<van-button type="primary">已修改</van-button>

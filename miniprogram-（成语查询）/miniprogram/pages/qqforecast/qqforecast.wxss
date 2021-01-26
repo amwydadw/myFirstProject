@@ -1,0 +1,11 @@
+/* pages/qqforecast/qqforecast.wxss */
+.beauty{
+  width: 100%;
+}
+.bg{
+  
+  height: 1000px;
+  width: 100%;
+  background:red;
+  z-index: -1;
+}

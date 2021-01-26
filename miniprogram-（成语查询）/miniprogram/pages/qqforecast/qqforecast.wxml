@@ -1,0 +1,28 @@
+<!--pages/qqforecast/qqforecast.wxml-->
+<!-- <text>pages/qqforecast/qqforecast.wxml</text> -->
+<van-search
+value="{{value}}"
+  v-model="value"
+  shape="round"
+  background="linear-gradient(to right, #4bb0ff, #6149f6)"
+  placeholder="请输入查询的成语"
+  bind:change="onChange"
+/>
+<van-button type="info" bindtap="getName" block color="linear-gradient(to right, #4bb0ff, #6149f6)">
+  成语查询
+</van-button>
+
+<van-cell-group >
+  <van-cell title="成语拼音" value="{{wordList.pinyin}}" />
+  <van-cell title="解释" value="{{wordList.chengyujs}}" />
+   <van-cell title="词语解释" value="{{wordList.ciyujs}}" />
+    <van-cell title="例子" value="{{wordList.example}}" />
+    <van-cell title="同义词" value="{{wordList.tongyi}}" />
+    <van-cell title="印证" value="{{wordList.yinzhengjs}}" />
+
+</van-cell-group>
+
+<view>
+ <view ><image src="http://qb69zgyyd.bkt.clouddn.com/shuji9" class="beauty"></image></view>
+
+</view>
