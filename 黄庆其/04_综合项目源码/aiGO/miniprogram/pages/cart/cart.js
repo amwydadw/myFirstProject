@@ -12,7 +12,8 @@ scope值false
 import {
   getSetting,
   chooseAddress,
-  showModal
+  showModal,
+  showToast
 } from '../../utils/asyncWX';
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
@@ -156,7 +157,7 @@ Page({
     this.setCart(cart);
   },
   // 商品数量加减
- async handleItemNumEdit(e) {
+  async handleItemNumEdit(e) {
     // console.log(e);
     const {
       operation,
@@ -171,24 +172,26 @@ Page({
     const index = cart.findIndex(v => v.goods_id === id);
     // 判段是否要执行删除
     if (cart[index].num === 1 && operation === -1) {
-    /* 
-      // 弹窗提示
-      wx.showModal({
-        title: '提示',
-        content: '您是否要删除？',
-        success: (res) => {
-          if (res.confirm) {
-            cart.splice(index, 1)
-            this.setCart(cart);
-          } else if (res.cancel) {}
-        }
+      /* 
+        // 弹窗提示
+        wx.showModal({
+          title: '提示',
+          content: '您是否要删除？',
+          success: (res) => {
+            if (res.confirm) {
+              cart.splice(index, 1)
+              this.setCart(cart);
+            } else if (res.cancel) {}
+          }
+        });
+        */
+      const res = await showModal({
+        content: "您是否要删除？"
       });
-      */ 
-const res=await showModal({content:"您是否要删除？"});
-if (res.confirm) {
-  cart.splice(index, 1)
-  this.setCart(cart);
-}
+      if (res.confirm) {
+        cart.splice(index, 1)
+        this.setCart(cart);
+      }
     } else {
       // 进行修改数量
       cart[index].num += operation;
@@ -196,5 +199,24 @@ if (res.confirm) {
       this.setCart(cart);
     }
 
+  },
+  // 点击结算
+  async handlePay(e) {
+    // console.log(e)
+    // 判断收货地址
+    const{address,totalNum}=this.data;
+    if(!address.userName){
+      await showToast({title:"您还没有选择收货地址"});
+      return;
+    }
+    // 判断用户有没有选购商品
+    if(totalNum==0){
+      await showToast({title:"您还没有选购商品"});
+      return;
+    }
+    // 以上判段均通过则跳转到支付页面
+    wx.navigateTo({
+      url: '/pages/pay/pay',
+    })
   }
 })

@@ -41,3 +41,22 @@ export const showModal = ({content}) => {
     });
   })
 }
+/**
+*结算页面弹窗
+*@param {object} param0
+*/
+export const showToast = ({title}) => {
+  return new Promise((resolve, reject) => {
+    // 弹窗提示
+    wx.showToast({
+      title: title,
+      icon:'none',
+      success: (res) => {
+       resolve(res);
+      },
+      fail:(err)=>{
+        reject(err);
+      }
+    });
+  })
+}
